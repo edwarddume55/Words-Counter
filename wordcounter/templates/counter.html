@@ -1,0 +1,28 @@
+
+
+<div class="col-12 pb-3" style="background-color: #c2c2d6; border: 2px; border-style: groove; border-radius: 10px; width: 80%; height: 75%;    margin-left: auto;
+margin-right: auto;"> 
+<form action="counter" method="POST"> {% csrf_token %} 
+	<div class="form-group " style="border-style: groove;border-radius: 10px; width: 70%; height: 50%;    margin-left: auto;
+    margin-right: auto; padding: 20px;> 
+	<label for="text1"><h2>Paste/Write you're text</h2></label> 
+	<textarea class="form-control" placeholder="Paste you're text here to count word and character"
+				name="texttocount" id="text1" rows="8" style="background-color: #f0f5f5;  margin-left: auto;
+                margin-right: auto; width: 70%; height: 60%;">{{text}}</textarea> 
+	</div>  
+	<div class="form-group text-center "> 
+	<button type="submit" class="btn btn-primary " style="background-color: aquamarine; border-radius: 5px; "><h2>Run</h2></button> 
+	</div> 
+</form> 
+
+{% if i %} 
+<div class="mb-2" style="border-style: groove;border-radius: 10px; width: 60%; height: 20%;    margin-left: auto;
+margin-right: auto;"> 
+<div class="card-header"> 
+	<p class="m-0" style="font-size: 20px;"><h3>The number of words in your text is: {{word}}</h3></p> 
+
+
+</div> 
+</div> 
+{% endif %} 
+</div>
